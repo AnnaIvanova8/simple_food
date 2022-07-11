@@ -3,6 +3,123 @@
 @import 'reset';
 @import 'global';
 
+.navigation {
+   display: flex;
+   padding: 60px 0;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.logo {
+   transition: box-shadow 0.5s linear, opacity 0.5s linear;
+
+   &:focus {
+      box-shadow: 0 0 0 2px $orange-900;
+      border-radius: 5px;
+   }
+
+   &:hover {
+      opacity: 0.8;
+   }
+
+   &:active {
+      opacity: 0.5;
+   }
+}
+
+.menu {
+   display: flex;
+   align-items: center;
+
+   &__list {
+      display: flex;
+      margin-right: 63px;
+   }
+
+   &__item:not(:last-child) {
+      margin-right: 45px;
+   }
+
+   &__link {
+      font-size: 18px;
+      transition: box-shadow 0.5s linear, opacity 0.5s linear;
+
+      &:focus {
+         box-shadow: 0 0 0 2px $orange-900;
+         border-radius: 5px;
+      }
+
+      &:hover {
+         color: $orange-900;
+      }
+
+      &:active {
+         color: $dark;
+         text-shadow: 2px 2px 5px;
+      }
+   }
+
+   &__navigation {
+      display: flex;
+   }
+
+   &__navigation-link {
+      position: relative;
+      width: 19px;
+      height: 19px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: box-shadow 0.5s linear, opacity 0.5s linear;
+   }
+
+   &__navigation-link:focus,
+   &__navigation-link:hover,
+   &__navigation-link:active {
+      width: 44px;
+      height: 44px;
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: center;
+      border-radius: 5px;
+   }
+
+   &__navigation-link:focus {
+      background-color: rgba(255, 122, 80, 0.1);
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+   }
+
+   &__navigation-link:hover {
+      background-color: #FF7A50;
+   }
+
+   &__navigation-link:active {
+      background-color: #FFF2ED;
+   }
+
+   &__navigation-link:not(:last-child) {
+      margin-right: 35px;
+   }
+
+   &__navigation-num {
+      position: absolute;
+      font-size: 10px;
+      color: #fff;
+      text-align: center;
+      line-height: 14px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      top: -5px;
+      right: -9px;
+      background-color: $orange-900;
+   }
+}
+
+
+
+
+
+
 
 
 @import 'media';

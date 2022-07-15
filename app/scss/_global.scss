@@ -44,3 +44,51 @@ button {
    border: none;
    cursor: pointer;
 }
+
+.section {
+   padding: 120px 0;
+}
+
+.animation {
+   transition: box-shadow 0.5s linear, opacity 0.5s linear;
+
+   &:hover {
+      color: $orange-900;
+      text-decoration-line: none;
+   }
+
+   &:focus {
+      box-shadow: 0 0 0 2px $orange-900;
+      border-radius: 5px;
+      text-decoration-line: none;
+   }
+
+   &:active {
+      color: $dark;
+      text-shadow: 2px 2px 5px;
+      text-decoration-line: none;
+}
+}
+
+.animation__btn {
+   transition: box-shadow 0.5s linear, opacity 0.5s linear;
+
+   &:hover {
+      background: #FFFFFF;
+      color: $orange-900;
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+   }
+
+   &:focus {
+      background-color: rgba(255, 122, 80, 0.1);
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+      color: $orange-900;
+   }
+
+   &:active {
+      background-color: $lightPink;
+      color: $orange-900;
+   }
+}
